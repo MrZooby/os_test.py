@@ -17,6 +17,7 @@ parser.add_argument("-f","--file", help="Full path of file to read")
 parser.add_argument("-s","--search", help="Search given file")
 args = parser.parse_args()
 if len(sys.argv) == 1:
+    print(f"Python Version {sys.version}")
     parser.print_help()
 if args.path:
     list = get_files(args.path)
