@@ -4,9 +4,6 @@ import os
 import sys
 import argparse
 
-def get_files(path):
-    return os.listdir(path)
-
 def open_file(file):
     file = open(file)
     return file
@@ -20,12 +17,12 @@ if len(sys.argv) == 1:
     print(f"Python Version {sys.version}")
     parser.print_help()
 if args.path:
-    list = get_files(args.path)
+    list = os.listdir(args.path)
     for word in list:
         print(word)
 if args.file:
-    file = open_file(args.file)
     if args.search is None:
+        file = open_file(args.file)
         print(file.read())
     else:
         pass
