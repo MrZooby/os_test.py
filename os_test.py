@@ -14,7 +14,7 @@ def read_file(file):
 parser = argparse.ArgumentParser()
 parser.add_argument("-p","--path", help="Enter directory to read")
 parser.add_argument("-f","--file", help="Full path of file to read")
-parser.add_argument("-s","--search", help="search given file")
+parser.add_argument("-s","--search", help="Search given file")
 args = parser.parse_args()
 if len(sys.argv) == 1:
     parser.print_help()
