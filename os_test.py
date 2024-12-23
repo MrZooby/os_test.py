@@ -7,7 +7,7 @@ import argparse
 def get_files(path):
     return os.listdir(path)
 
-def read_file(file):
+def open_file(file):
     file = open(file)
     return file
 
@@ -24,7 +24,7 @@ if args.path:
     for word in list:
         print(word)
 if args.file:
-    file = read_file(args.file)
+    file = open_file(args.file)
     if args.search is None:
         print(file.read())
     else:
@@ -33,7 +33,7 @@ if args.search:
     if args.file is None:
         raise Exception("-f required when using this option")
     line_count = 0
-    file = read_file(args.file)
+    file = open_file(args.file)
     for line in file:
         if args.search in line:
             line_count += 1
