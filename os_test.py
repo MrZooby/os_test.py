@@ -28,7 +28,7 @@ if args.file:
         pass
 if args.search:
     if args.file is None:
-        raise Exception("-f required when using this option")
+        raise SyntaxError("--file must be used if using --search")
     line_count = 0
     file = open_file(args.file)
     for line in file:
