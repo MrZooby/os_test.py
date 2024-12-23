@@ -24,8 +24,6 @@ if args.file:
     if args.search is None:
         file = open_file(args.file)
         print(file.read())
-    else:
-        pass
 if args.search:
     if args.file is None:
         raise SyntaxError("--file must be used if using --search")
