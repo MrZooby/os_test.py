@@ -38,4 +38,4 @@ if args.search:
         if args.search in line:
             line_count += 1
             print(line, end='')
-    print(f"\n#######################\n\nThere are {line_count} matches!")
+    print(f"\n#######################\n\nThere are {line_count} matches!\n")
