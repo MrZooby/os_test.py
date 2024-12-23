@@ -12,9 +12,9 @@ def open_file(file):
     return file
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-p","--path", help="Enter directory to read")
-parser.add_argument("-f","--file", help="Full path of file to read")
-parser.add_argument("-s","--search", help="Search given file")
+parser.add_argument("-p","--path", help="Enter directory to list.")
+parser.add_argument("-f","--file", help="Full path of file to read.")
+parser.add_argument("-s","--search", help="Search file for instances of a given string.")
 args = parser.parse_args()
 if len(sys.argv) == 1:
     print(f"Python Version {sys.version}")
