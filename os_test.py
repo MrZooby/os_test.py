@@ -24,7 +24,10 @@ if args.path:
         print(word)
 if args.file:
     file = read_file(args.file)
-    print(file.read())
+    if args.search is None:
+        print(file.read())
+    else:
+        pass
 if args.search:
     if args.file is None:
         raise Exception("-f required when using this option")
